@@ -1,0 +1,20 @@
+{
+  "name": "etmpassignment1",
+  "version": "1.0.0",
+  "description": "Enterprise Technologies for Mobile Development - First assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MAPD18/ETMPAssignment1.git"
+  },
+  "author": "Rodrigo Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MAPD18/ETMPAssignment1/issues"
+  },
+  "homepage": "https://github.com/MAPD18/ETMPAssignment1#readme"
+}
