@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/MAPD18/ETMPAssignment1/issues"
   },
-  "homepage": "https://github.com/MAPD18/ETMPAssignment1#readme"
+  "homepage": "https://github.com/MAPD18/ETMPAssignment1#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
