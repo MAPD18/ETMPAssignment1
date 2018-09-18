@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express()
+const bodyParser = require('body-parser');
 const port = 8090
+
+app.use(bodyParser.json());
 
 app.get('/sendGet', (request, response) => {
     console.log("GET request received")
@@ -9,7 +12,7 @@ app.get('/sendGet', (request, response) => {
 
 app.post('/sendPost', (request, response) => {
     console.log("POST request received")
-    response.send("POST: Hello world")
+    response.send(request.body)
 })
 
 app.listen(port, (err) => {
