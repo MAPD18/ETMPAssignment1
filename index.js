@@ -4,10 +4,12 @@ const bodyParser = require('body-parser');
 const port = 8090
 var getCount = 0
 var postCount = 0
+var deleteCount = 0
 
 var storage = []
 const getUri = '/sendGet'
 const postUri = '/sendPost'
+const deleteUri = '/sendDelete'
 
 app.use(bodyParser.json());
 
@@ -20,7 +22,15 @@ app.get(getUri, (request, response) => {
 app.post(postUri, (request, response) => {
     logRequests(postUri)
     storage.push(request.body)
+    response.send(200)
     logResponses(postUri)
+})
+
+app.delete(deleteUri, (request, response) => {
+    logRequests(deleteUri)
+    storage = []
+    response.send(200)
+    logResponses(deleteUri)
 })
 
 function getStorageContentAsJsonString() {
@@ -41,9 +51,11 @@ function logRequests(requestMethod) {
         getCount++
     } else if (requestMethod == postUri) {
         postCount++
+    } else if (requestMethod == deleteUri) {
+        deleteCount++
     }
     console.log(`${requestMethod} request received`)
-    console.log(`Processed Request Count --> ${getUri}:${getCount}, ${postUri}:${postCount}`)
+    console.log(`Processed Request Count --> ${getUri}:${getCount}, ${postUri}:${postCount}, ${deleteUri}:${deleteCount}`)
 }
 
 function logResponses(responseMethod) {
@@ -51,11 +63,12 @@ function logResponses(responseMethod) {
 }
 
 app.listen(port, (err) => {
+    console.info("server starting...")
     if (err) {
         return console.error("Something bad have occurred", err)
     }
 
-    console.info("server is listening to http://127.0.0.1:" + port)
-    console.info("server is listening to http://127.0.0.1:" + port + getUri)
-    console.info("server is listening to http://127.0.0.1:" + port + postUri)
+    console.info(`server is listening to http://127.0.0.1:${port}${getUri}`)
+    console.info(`server is listening to http://127.0.0.1:${port}${postUri}`)
+    console.info(`server is listening to http://127.0.0.1:${port}${deleteUri}`)
 })
