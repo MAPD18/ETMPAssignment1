@@ -12,12 +12,15 @@ const postUri = '/sendPost'
 app.use(bodyParser.json());
 
 app.get(getUri, (request, response) => {
-    console.log(getUri + " request received")
-    getCount++
-    console.log(getRequestCountStr(getCount, postCount))
-    
+    logRequests(getUri)
     response.send(getStorageContentAsJsonString())
-    console.log(getUri + " sending response")
+    logResponses(getUri)
+})
+
+app.post(postUri, (request, response) => {
+    logRequests(postUri)
+    storage.push(request.body)
+    logResponses(postUri)
 })
 
 function getStorageContentAsJsonString() {
@@ -33,18 +36,18 @@ function getStorageContentAsJsonString() {
     return arrayStr
 }
 
+function logRequests(requestMethod) {
+    if (requestMethod == getUri) {
+        getCount++
+    } else if (requestMethod == postUri) {
+        postCount++
+    }
+    console.log(`${requestMethod} request received`)
+    console.log(`Processed Request Count --> ${getUri}:${getCount}, ${postUri}:${postCount}`)
+}
 
-app.post(postUri, (request, response) => {
-    console.log(postUri + " request received")
-    postCount++
-    console.log(getRequestCountStr(getCount, postCount))
-    response.send(request.body)
-    storage.push(request.body)
-    console.log(postUri + " sending response")
-})
-
-function getRequestCountStr(getCount, postCount) {
-    return `Processed Request Count --> ${getUri}:${getCount}, ${postUri}:${postCount}`
+function logResponses(responseMethod) {
+    console.log(`${responseMethod} sending response`)
 }
 
 app.listen(port, (err) => {
