@@ -7,7 +7,7 @@ var postCount = 0
 var deleteCount = 0
 
 var storage = []
-const rootUrl = 'http://127.0.0.1'
+const devUrl = 'http://127.0.0.1'
 const getUri = '/sendGet'
 const postUri = '/sendPost'
 const deleteUri = '/sendDelete'
@@ -69,7 +69,8 @@ app.listen(process.env.PORT || port, (err) => {
         return console.error("Something bad have occurred", err)
     }
 
-    console.info(`server is listening to ${process.env.ROOT_URL || rootUrl}:${process.env.PORT || port}${getUri}`)
-    console.info(`server is listening to ${process.env.ROOT_URL || rootUrl}:${process.env.PORT || port}${postUri}`)
-    console.info(`server is listening to ${process.env.ROOT_URL || rootUrl}:${process.env.PORT || port}${deleteUri}`)
+
+    console.info(`server is listening to ${process.env.PROD_URL || devUrl}:${process.env.PORT || port}${getUri}`)
+    console.info(`server is listening to ${process.env.PROD_URL || devUrl}:${process.env.PORT || port}${postUri}`)
+    console.info(`server is listening to ${process.env.PROD_URL || devUrl}:${process.env.PORT || port}${deleteUri}`)
 })
