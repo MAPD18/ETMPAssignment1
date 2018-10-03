@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="691" height="687" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <source><![CDATA[Postman->Nodejs: POST /sendPost
+Note right of Postman: {"id":1,"item":"Item1"}
+Note over Nodejs: Insert JSON Object\ninto Storage
+Browser->Nodejs: GET /sendGet
+Nodejs->Browser: /sendGet Response
+Note right of Nodejs: {storage:\n[{"id":1,"item":"Paper"},\n...,\n{"id":N,"item":"ItemN"}]}
+Postman->Nodejs: DELETE /sendDelete
+Note over Nodejs: Clear the Storage
+Browser->Nodejs: GET /sendGet
+Nodejs->Browser: /sendGet Response
+Note right of Nodejs: {storage:[]}]]></source>
+    <desc></desc>
+    <defs>
+        <marker viewBox="0 0 5 5" markerWidth="5" markerHeight="5" orient="auto" refX="5" refY="2.5" id="markerArrowBlock">
+            <path d="M 0 0 L 5 2.5 L 0 5 z"></path>
+        </marker>
+        <marker viewBox="0 0 9.6 16" markerWidth="4" markerHeight="16" orient="auto" refX="9.6" refY="8" id="markerArrowOpen">
+            <path d="M 9.6,8 1.92,16 0,13.7 5.76,8 0,2.286 1.92,0 9.6,8 z"></path>
+        </marker>
+    </defs>
+    <g class="title"></g>
+    <g class="actor">
+        <rect x="10" y="20" width="88.19999694824219" height="38.5" style="stroke-width: 2;" stroke="#000000" fill="#ffffff"></rect>
+        <text x="20.5" y="45" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="20">Postman</tspan>
+        </text>
+    </g>
+    <g class="actor">
+        <rect x="10" y="628.8000068664551" width="88.19999694824219" height="38.5" style="stroke-width: 2;" stroke="#000000" fill="#ffffff"></rect>
+        <text x="20.5" y="653.8000068664551" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="20">Postman</tspan>
+        </text>
+    </g>
+    <line x1="54.099998474121094" x2="54.099998474121094" y1="58.5" y2="628.8000068664551" style="stroke-width: 2;" stroke="#000000" fill="none"></line>
+    <g class="actor">
+        <rect x="286.60000228881836" y="20" width="78.5999984741211" height="38.5" style="stroke-width: 2;" stroke="#000000" fill="#ffffff"></rect>
+        <text x="297.10000228881836" y="45" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="296.60000228881836">Nodejs</tspan>
+        </text>
+    </g>
+    <g class="actor">
+        <rect x="286.60000228881836" y="628.8000068664551" width="78.5999984741211" height="38.5" style="stroke-width: 2;" stroke="#000000" fill="#ffffff"></rect>
+        <text x="297.10000228881836" y="653.8000068664551" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="296.60000228881836">Nodejs</tspan>
+        </text>
+    </g>
+    <line x1="325.9000015258789" x2="325.9000015258789" y1="58.5" y2="628.8000068664551" style="stroke-width: 2;" stroke="#000000" fill="none"></line>
+    <g class="actor">
+        <rect x="572.8000030517578" y="20" width="88.19999694824219" height="38.5" style="stroke-width: 2;" stroke="#000000" fill="#ffffff"></rect>
+        <text x="583.3000030517578" y="45" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="582.8000030517578">Browser</tspan>
+        </text>
+    </g>
+    <g class="actor">
+        <rect x="572.8000030517578" y="628.8000068664551" width="88.19999694824219" height="38.5" style="stroke-width: 2;" stroke="#000000" fill="#ffffff"></rect>
+        <text x="583.3000030517578" y="653.8000068664551" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="582.8000030517578">Browser</tspan>
+        </text>
+    </g>
+    <line x1="616.9000015258789" x2="616.9000015258789" y1="58.5" y2="628.8000068664551" style="stroke-width: 2;" stroke="#000000" fill="none"></line>
+    <g class="signal">
+        <text x="122.80000305175781" y="89.25" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="122.30000305175781">POST /sendPost</tspan>
+        </text>
+        <line x1="54.099998474121094" x2="325.9000015258789" y1="97" y2="97" style="stroke-width: 2; marker-end: url(&quot;#markerArrowBlock&quot;);" stroke="#000000" fill="none"></line>
+    </g>
+    <g class="note">
+        <rect x="74.0999984741211" y="117" width="231.8000030517578" height="28.5" style="stroke-width: 2;" stroke="#000000" fill="#ffffff"></rect>
+        <text x="79.5999984741211" y="137" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="79.0999984741211">{"id":1,"item":"Item1"}</tspan>
+        </text>
+    </g>
+    <g class="note">
+        <rect x="234" y="165.5" width="183.8000030517578" height="47.70000076293945" style="stroke-width: 2;" stroke="#000000" fill="#ffffff"></rect>
+        <text x="239.5" y="185.5" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="239">Insert JSON Object</tspan>
+            <tspan dy="1.2em" x="239">into Storage</tspan>
+        </text>
+    </g>
+    <g class="signal">
+        <text x="413.8000030517578" y="243.95000076293945" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="413.3000030517578">GET /sendGet</tspan>
+        </text>
+        <line x1="616.9000015258789" x2="325.9000015258789" y1="251.70000076293945" y2="251.70000076293945" style="stroke-width: 2; marker-end: url(&quot;#markerArrowBlock&quot;);" stroke="#000000" fill="none"></line>
+    </g>
+    <g class="signal">
+        <text x="389.8000030517578" y="282.45000076293945" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="389.3000030517578">/sendGet Response</tspan>
+        </text>
+        <line x1="325.9000015258789" x2="616.9000015258789" y1="290.20000076293945" y2="290.20000076293945" style="stroke-width: 2; marker-end: url(&quot;#markerArrowBlock&quot;);" stroke="#000000" fill="none"></line>
+    </g>
+    <g class="note">
+        <rect x="345.9000015258789" y="310.20000076293945" width="251" height="86.10000610351562" style="stroke-width: 2;" stroke="#000000" fill="#ffffff"></rect>
+        <text x="351.4000015258789" y="330.20000076293945" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="350.9000015258789">{storage:</tspan>
+            <tspan dy="1.2em" x="350.9000015258789">[{"id":1,"item":"Paper"},</tspan>
+            <tspan dy="1.2em" x="350.9000015258789">...,</tspan>
+            <tspan dy="1.2em" x="350.9000015258789">{"id":N,"item":"ItemN"}]}</tspan>
+        </text>
+    </g>
+    <g class="signal">
+        <text x="103.5999984741211" y="427.0500068664551" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="103.0999984741211">DELETE /sendDelete</tspan>
+        </text>
+        <line x1="54.099998474121094" x2="325.9000015258789" y1="434.8000068664551" y2="434.8000068664551" style="stroke-width: 2; marker-end: url(&quot;#markerArrowBlock&quot;);" stroke="#000000" fill="none"></line>
+    </g>
+    <g class="note">
+        <rect x="238.8000030517578" y="454.8000068664551" width="174.1999969482422" height="28.5" style="stroke-width: 2;" stroke="#000000" fill="#ffffff"></rect>
+        <text x="244.3000030517578" y="474.8000068664551" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="243.8000030517578">Clear the Storage</tspan>
+        </text>
+    </g>
+    <g class="signal">
+        <text x="413.8000030517578" y="514.0500068664551" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="413.3000030517578">GET /sendGet</tspan>
+        </text>
+        <line x1="616.9000015258789" x2="325.9000015258789" y1="521.8000068664551" y2="521.8000068664551" style="stroke-width: 2; marker-end: url(&quot;#markerArrowBlock&quot;);" stroke="#000000" fill="none"></line>
+    </g>
+    <g class="signal">
+        <text x="389.8000030517578" y="552.5500068664551" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="389.3000030517578">/sendGet Response</tspan>
+        </text>
+        <line x1="325.9000015258789" x2="616.9000015258789" y1="560.3000068664551" y2="560.3000068664551" style="stroke-width: 2; marker-end: url(&quot;#markerArrowBlock&quot;);" stroke="#000000" fill="none"></line>
+    </g>
+    <g class="note">
+        <rect x="345.9000015258789" y="580.3000068664551" width="126.19999694824219" height="28.5" style="stroke-width: 2;" stroke="#000000" fill="#ffffff"></rect>
+        <text x="351.4000015258789" y="600.3000068664551" style="font-size: 16px; font-family: Andale Mono, monospace;">
+            <tspan x="350.9000015258789">{storage:[]}</tspan>
+        </text>
+    </g>
+</svg>
