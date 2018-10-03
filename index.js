@@ -5,23 +5,35 @@ const port = 8090
 var getCount = 0
 var postCount = 0
 
+var storage = []
+const getUri = '/sendGet'
+const postUri = '/sendPost'
+
 app.use(bodyParser.json());
 
-const getUri = '/sendGet'
 app.get(getUri, (request, response) => {
     console.log(getUri + " request received")
     getCount++
     console.log(getRequestCountStr(getCount, postCount))
-    if (storage.length > 0) {
-        response.send(storage[0])
-    } else {
-        response.send("GET Information")
-    }
+    
+    response.send(getStorageContentAsJsonString())
     console.log(getUri + " sending response")
 })
 
-var storage = []
-const postUri = '/sendPost'
+function getStorageContentAsJsonString() {
+    var arrayStr = "{\"storage\": ["
+    for (var i = 0; i < storage.length; i++) {
+        var jsonObj = storage[i]
+        arrayStr = arrayStr + JSON.stringify(jsonObj)
+        if (i != storage.length - 1) {
+            arrayStr = arrayStr + ","
+        }
+    }
+    arrayStr = arrayStr + "]}"
+    return arrayStr
+}
+
+
 app.post(postUri, (request, response) => {
     console.log(postUri + " request received")
     postCount++
